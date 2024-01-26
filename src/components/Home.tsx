@@ -2,19 +2,22 @@ import React from 'react'
 import react from '../images/React.png'
 import git from '../images/Git.png'
 import tailwind from '../images/Tailwind.png'
-
+import linkedin from '../images/Linkedin.png'
+import gmail from '../images/Gmail.jpg'
+import github from '../images/GitHub.png'
 
 const Home = () => {
   return (
-    <div className="w-full" style={{height:"88vh", /*clipPath:"polygon(0% 0%, 100% 0%, 100% 95%, 0 100%)"*/}}>
+    <div className="w-full" style={{height:"88vh", clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)"}}>
       <div className="flex shadow-lg" style={{height:"100%"}}>
         <div className="flex items-center text-center px-8 md:text-left sm:px-12 md:w-1/2 lg:text-left md:px-12 lg:w-1/2">
             <div>
                 <h2 className="text-3xl font-semibold text-gray-200 sm:text-4xl">I Make <span className="text-indigo-600">Websites</span></h2>
-                <p className="mt-2 text-sm text-gray-400 sm:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi cum cupiditate ducimus, fugit harum id necessitatibus odio quam quasi, quibusdam rem tempora voluptates. Cumque debitis dignissimos id quam vel!</p>
-                <div className="flex justify-center md:justify-start lg:justify-start mt-6">
-                    <a className="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="#">Get Started</a>
-                    <a className="mx-4 px-4 py-3 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="#">Learn More</a>
+                <p className="mt-6 text-sm text-gray-400 sm:text-base">Find me on:</p>
+                <div className="flex justify-center md:justify-start lg:justify-start mt-2">
+                    <a className="p-1 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="https://www.linkedin.com/in/bishow712/" target='_blank'><img src={`${linkedin}`} className="w-6 h-6" alt="Linkedin" /></a>
+                    <a className="mx-4 p-1 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="https://github.com/bishow712" target='_blank'><img src={`${github}`} className="w-6 h-6" alt="Github" /></a>
+                    <a className="p-1 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="https://mail.google.com/mail/?view=cm&fs=1&to=bishow712@gmail.com" target='_blank'><img src={`${gmail}`} className="w-6 h-6" alt="Github" /></a>
                 </div>
             </div>
         </div>
@@ -65,7 +68,7 @@ const Home = () => {
                         <li>
                             <div className="item">
                                 <div className="item__icon">
-                                <img src={`${tailwind}`} className="w-6 h-6" alt="React" /> 
+                                <img src={`${tailwind}`} className="w-6 h-6" alt="Tailwind" /> 
                                 </div>
                                 <div className="item__text">Tailwind</div>
                             </div>

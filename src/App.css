@@ -51,9 +51,9 @@ body{
     gap: 0 2rem;
 }
 
-/* .grid:hover li {
+.grid:hover li {
     animation-play-state: paused;
-} */
+}
 
 .item {
     align-items: center;

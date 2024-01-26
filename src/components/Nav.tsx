@@ -7,7 +7,7 @@ const Nav = () => {
                 <div className="md:flex items-center justify-between py-2 px-8 md:px-12">
                     <div className="flex justify-between items-center">
                         <div className="text-2xl font-bold text-gray-400 md:text-3xl">
-                            <a href="#">Bishow</a>
+                            <a href="#">Bishow.dev</a>
                         </div>
                         <div className="md:hidden">
                             <button type="button" className="block text-gray-800 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
