@@ -5,19 +5,27 @@ import tailwind from '../images/Tailwind.png'
 import linkedin from '../images/Linkedin.png'
 import gmail from '../images/Gmail.jpg'
 import github from '../images/GitHub.png'
+import me from '../images/bishow.jpg'
 
 const Home = () => {
     return (
-        <div className="h-88 w-full" style={{ height: "70vh", clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)" }}>
+        <div className="h-88 w-full" style={{ height: "80vh", clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)" }}>
             <div className="flex shadow-lg" style={{ height: "100%" }}>
                 <div className="flex items-center px-8 md:text-left sm:px-12 sm:w-3/5 lg:text-left md:px-12 md:w-1/2">
                     <div>
-                        <h2 className="text-3xl font-semibold text-gray-200 sm:text-4xl">I Make <span className="text-indigo-600">Websites</span></h2>
-                        <p className="mt-6 text-sm text-gray-400 sm:text-base">Find me on:</p>
-                        <div className="flex justify-start lg:justify-start mt-2">
-                            <a className="p-1 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="https://www.linkedin.com/in/bishow712/" target='_blank'><img src={`${linkedin}`} className="w-6 h-6" alt="Linkedin" /></a>
-                            <a className="mx-4 p-1 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="https://github.com/bishow712" target='_blank'><img src={`${github}`} className="w-6 h-6" alt="Github" /></a>
-                            <a className="p-1 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="https://mail.google.com/mail/?view=cm&fs=1&to=bishow712@gmail.com" target='_blank'><img src={`${gmail}`} className="w-6 h-6" alt="Github" /></a>
+                        <div>
+                            <h2 className="pb-6 pr-4 text-3xl font-semibold text-gray-200 sm:text-4xl">Hii I am, <span className="text-indigo-600"> <br />Bishow Adhikari.</span></h2>
+                            <div className="mb-8 bg-black w-[12rem] h-[12rem] overflow-hidden opacity-60" style={{ borderRadius: "49% 51% 67% 33% / 23% 70% 30% 77%" }}>
+                                <img src={`${me}`} alt="My picture." className='w-full h-full object-cover' />
+                            </div>
+
+                            <h2 className="text-3xl font-semibold text-gray-200 sm:text-4xl">I Make <span className="text-indigo-600">Websites.</span></h2>
+                            <p className="mt-6 text-sm text-gray-400 sm:text-base">Find me on:</p>
+                            <div className="flex justify-start mt-2">
+                                <a className="p-1 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="https://www.linkedin.com/in/bishow712/" target='_blank' rel="noreferrer"><img src={`${linkedin}`} className="w-6 h-6" alt="Linkedin" /></a>
+                                <a className="mx-4 p-1 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="https://github.com/bishow712" target='_blank' rel="noreferrer"><img src={`${github}`} className="w-6 h-6" alt="Github" /></a>
+                                <a className="p-1 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="https://mail.google.com/mail/?view=cm&fs=1&to=bishow712@gmail.com" target='_blank' rel="noreferrer"><img src={`${gmail}`} className="w-6 h-6" alt="Github" /></a>
+                            </div>
                         </div>
                     </div>
                 </div>

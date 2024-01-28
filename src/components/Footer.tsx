@@ -16,9 +16,9 @@ const Footer = () => {
           </div>       */}
 
           <div className="pt-4 md:pt-0 flex flex-row space-x-8 items-center md:justify-evenly">
-            <a className="p-1 bg-gray-300 bg-opacity-10 rounded hover:bg-gray-400" href="https://www.linkedin.com/in/bishow712/" target='_blank'><img src={`${linkedin}`} className="w-6 h-6" alt="Linkedin" /></a>
-            <a className="p-1 bg-gray-300 bg-opacity-10 rounded hover:bg-gray-400" href="https://github.com/bishow712" target='_blank'><img src={`${github}`} className="w-6 h-6" alt="Github" /></a>
-            <a className="p-1 bg-gray-300 bg-opacity-10 rounded hover:bg-gray-400" href="https://mail.google.com/mail/?view=cm&fs=1&to=bishow712@gmail.com" target='_blank'><img src={`${gmail}`} className="w-6 h-6" alt="Github" /></a>
+            <a className="p-1 bg-gray-300 bg-opacity-10 rounded hover:bg-gray-400" href="https://www.linkedin.com/in/bishow712/" target='_blank' rel="noreferrer"><img src={`${linkedin}`} className="w-6 h-6" alt="Linkedin" /></a>
+            <a className="p-1 bg-gray-300 bg-opacity-10 rounded hover:bg-gray-400" href="https://github.com/bishow712" target='_blank' rel="noreferrer"><img src={`${github}`} className="w-6 h-6" alt="Github" /></a>
+            <a className="p-1 bg-gray-300 bg-opacity-10 rounded hover:bg-gray-400" href="https://mail.google.com/mail/?view=cm&fs=1&to=bishow712@gmail.com" target='_blank' rel="noreferrer"><img src={`${gmail}`} className="w-6 h-6" alt="Github" /></a>
           </div>
         </div>
 
