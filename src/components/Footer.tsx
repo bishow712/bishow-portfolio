@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
 
         {/* <div className='text-center text-gray-500 pb-4'>
-          <p>This website was made using TypeScript, React, Tailwind.</p>
+          <p>This is a fully responsive website made using TypeScript, React, Tailwind.</p>
         </div> */}
       </div>
 
