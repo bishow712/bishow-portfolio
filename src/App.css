@@ -49,10 +49,44 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 2rem;
+    --rotate: .7;
+    transition: transform 0.5s;
+    	/*	3D translation */
+	transform:
+    rotateX(calc(var(--rotate, 0) * 20deg))
+    rotateZ(calc(var(--rotate, 0) * -20deg))
+    skewX(calc(var(--rotate, 0) * 20deg));
+}
+
+li {
+	min-height: 60px;
+	transform-style: preserve-3d;
+	width: 100%;
+	z-index: calc(1 + var(--active));
+}
+
+li::before {
+	content: "";
+	position: absolute;
+	inset: 4px 4px -2px -2px;
+	border-radius: 6px;
+	background: hsla(0, 0%, 77%, 0.247);
+	filter: blur(calc(var(--active, 0) * 8px));
+	z-index: -1;
+	transition: scale var(--transition), opacity var(--transition), translate var(--transition), filter var(--transition);
+	transform-origin: 50% 0;
+	scale: 1 calc(1 + (var(--active, 0) * 0.05));
+	--tw-shadow: 0 4px 6px -1px rgba(197, 197, 197, 0.1), 0 2px 4px -2px rgba(104, 104, 104, 0.1);
+    box-shadow: 0 0 #dbdbdb00, 0 0 #0000, var(--tw-shadow);
 }
 
 .grid:hover li {
     animation-play-state: paused;
+}
+
+.grid {
+	transform-style: preserve-3d;
+	gap: 1rem;
 }
 
 .item {
@@ -116,3 +150,170 @@ li:nth-of-type(12) { --index: 5; }
         }
     }
 }
+
+/* Skills background */
+
+@keyframes jumbo {
+    from {
+        background-position: 50% 50%, 50% 50%;
+    }
+    to {
+        background-position: 350% 50%, 350% 50%;
+    }
+}
+
+.jumbo {
+    --stripes: repeating-linear-gradient(
+        100deg,
+        #fff 0%,
+        #fff 7%,
+        transparent 10%,
+        transparent 12%,
+        #fff 16%
+    );
+    --stripesDark: repeating-linear-gradient(
+        100deg,
+        #000 0%,
+        #000 7%,
+        transparent 10%,
+        transparent 12%,
+        #000 16%
+    );
+    --rainbow: repeating-linear-gradient(
+        100deg,
+        #60a5fa 10%,
+        #e879f9 15%,
+        #60a5fa 20%,
+        #5eead4 25%,
+        #60a5fa 30%
+    );
+    background-image: var(--stripesDark), var(--rainbow);
+    background-size: 300%, 200%;
+    background-position: 50% 50%, 50% 50%;
+
+    filter: blur(30px) opacity(40%) saturate(100%);
+
+    mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
+
+    pointer-events: none;
+}
+
+.jumbo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--stripesDark), var(--rainbow);
+    background-size: 200%, 100%;
+    animation: jumbo 60s linear infinite;
+    background-attachment: fixed;
+    mix-blend-mode: difference;
+}
+
+
+/* Footer */
+/* .bg-layers {
+    -webkit-animation: filter-animation 4s infinite ease-in-out;
+    animation: filter-animation 4s infinite ease-in-out;
+}
+
+.bg-scale {
+    -webkit-animation: filter-animation 8s infinite ease-in-out;
+    animation: filter-scale 8s infinite ease-in-out;
+}
+  
+@-webkit-keyframes filter-animation {
+    0% {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    50% {
+      -webkit-filter: hue-rotate(45deg);
+    }
+    
+    100% {
+      -webkit-filter: hue-rotate(0deg);
+    }
+}
+  
+@keyframes filter-animation {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    50% {
+      filter: hue-rotate(45deg);
+    }
+    100% {
+      filter: hue-rotate(0deg);
+    }
+}
+
+@keyframes filter-scale {
+    0% {
+      transform:scale(1);
+    }
+    50% {
+      transform:scale(1.4);
+    }
+    100% {
+        transform:scale(.8);
+    }
+} */
+
+/* Glitching text */
+.glitch{
+    animation: glitch 1s linear infinite;
+  }
+  
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  .glitch:before,
+  .glitch:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  
+  .glitch:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  .glitch:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }
