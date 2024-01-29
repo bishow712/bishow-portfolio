@@ -3,9 +3,9 @@ import React from 'react'
 const Skills = () => {
   return (
 
-    <div className='relative bg-opacity-50 p-6 pt-12 pb-20 shadow-lg text-gray-400 bg-gray-900' style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 90%, 0 100%)", height: "100%" }}>
+    <div className='relative bg-opacity-50 p-6 pt-12 pb-20 shadow-lg text-gray-400 ' style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)", height: "100%" }}>
       <div className='absolute inset-0 overflow-hidden'>
-        <div className='jumbo absolute -inset-[10px] opacity-50'></div>
+        <div className='jumbo absolute -inset-[10px] opacity-30'></div>
       </div>
       <h1 className='relative text-3xl text-center p-5 px-14' style={{ paddingTop: "0rem" }}>Technical Skills</h1>
       <div className='md:flex md:justify-start'>

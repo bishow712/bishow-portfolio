@@ -18,7 +18,7 @@ const Nav = () => {
                             </button>
                         </div> */}
                     </div>
-                    <div className="flex flex-col sm:flex-row hidden sm:block -mx-2">
+                    <div className="flex flex-col sm:flex-row hidden md:block -mx-2">
                         <a href="/" className="text-gray-400 rounded hover:bg-gray-900 hover:text-indigo-600 hover:font-medium py-2 px-2 md:mx-2"
                             style={{ transition: "color 0.3s" }}
                             onMouseEnter={(e) => (e.target as HTMLElement).textContent = '<Home/>'} onMouseLeave={(e) => (e.target as HTMLElement).textContent = 'Home'}>Home</a>

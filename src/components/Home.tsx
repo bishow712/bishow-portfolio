@@ -9,7 +9,7 @@ import me from '../images/bishow.jpg'
 
 const Home = () => {
     return (
-        <div className="h-88 w-full" style={{ height: "80vh", clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)" }}>
+        <div className="h-88 w-full" style={{ height: "82vh", clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)" }}>
             <div className="flex shadow-lg" style={{ height: "100%" }}>
                 <div className="flex items-center px-8 md:text-left sm:px-12 sm:w-3/5 lg:text-left md:px-12 md:w-1/2">
                     <div>
@@ -129,7 +129,7 @@ const Home = () => {
                                             <div className="item__icon">
 
                                             </div>
-                                            <div className="item__text">Node</div>
+                                            <div className="item__text">Python</div>
                                         </div>
                                     </li>
                                     <li>
